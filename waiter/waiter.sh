@@ -6,7 +6,7 @@ if [ -z "$1" ]
     exit 1
 fi
 
-WAIT=${2:="1"}
+WAIT=${2:-"1"}
 
 echo "Waiting for $1 to be accessible..." 
 while fuser $1 >/dev/null 2>&1 ; do
